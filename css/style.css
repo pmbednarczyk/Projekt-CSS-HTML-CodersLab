@@ -9,6 +9,21 @@ a {
 p {
     line-height: 1.6;
 }
+.section-header {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 19px;
+    margin-bottom: 40px;
+}
+.section-header:after {
+    content: '';
+    width: 320px;
+    height: 7px;
+    left: 0;
+    bottom: -10px;
+    background-color: #25c5a9;
+    position: absolute;
+}
 .container {
     max-width: 1056px;
     width: 100%;
@@ -66,6 +81,7 @@ nav ul li a {
     background: #000;
     min-width: 160px;
     padding: 10px;
+    z-index: 1;
     display: none;
 }
 .menu > li:hover .submenu{
@@ -150,27 +166,33 @@ nav ul li a {
 }
 
 /* Section Boxes */
+.boxes-section {
+    padding: 25px 0 55px;;
+}
 
 .boxes__box {
     display: inline-block;
-    width: 33%;
+    width: 32%;
     position: relative;
     min-height: 227px;
     vertical-align: top;
     background-size: cover;
+    margin-right: 2%;
 }
 
 .boxes__box:first-child {
-    background: url("/images/box1_img.jpg");
+    background-image: url("/images/box1_img.jpg");
 
 }
 
 .boxes__box:nth-child(2) {
-    background: url("/images/box2_img.jpg");
+    background-image: url("/images/box2_img.jpg");
 }
 
 .boxes__box:last-child {
-    padding: 10px;
+    padding: 21px;
+    border: 1px solid #dadada;
+    margin-right: 0;
 }
 
 .boxes__box > div {
@@ -184,10 +206,41 @@ nav ul li a {
 .boxes__box span {
     font-weight: 600;
     font-size: 15px;
+    position: relative;
+}
+.boxes__box span:after {
+    content: '';
+    width: 138px;
+    height: 7px;
+    left: 0;
+    bottom: -9px;
+    background-color: #25c5a9;
+    position: absolute;
 }
 .boxes__box p {
     font-size: 14px;
+    margin-top: 20px;
 }
+
+/* Section Pricing */
+.pricing-section {
+    padding: 35px 0;
+    background: #f1f1f1;
+}
+
+.pricing-box {
+    display: inline-block;
+    width: 32%;
+    position: relative;
+    height: 500px;
+    vertical-align: top;
+    background-size: cover;
+    margin-right: 2%;
+}
+.pricing-box:last-child {
+    margin-right: 0;
+}
+
 /* Footer */
 footer {
     background: #000;
