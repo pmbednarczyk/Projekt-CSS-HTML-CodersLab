@@ -1,0 +1,229 @@
+body {
+    font-family: "Raleway", Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: initial;
+    transition: all 0.2s ease-in-out;
+}
+p {
+    line-height: 1.6;
+}
+.container {
+    max-width: 1056px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.container:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+/* Header*/
+header {
+    line-height: 40px;
+    background: #000;
+}
+
+.logo {
+    float: left;
+    color: #fff;
+    font-size: 19px;
+}
+
+.logo > span, .slider-content__inner h2 > span {
+    color: #26bca3;
+    font-weight: 600;
+}
+
+nav {
+    float: right;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.menu > li {
+    position: relative;
+}
+.submenu {
+    position: absolute;
+    top: 100%;
+    background: #000;
+    min-width: 160px;
+    padding: 10px;
+    display: none;
+}
+.menu > li:hover .submenu{
+    display: block;
+}
+
+.submenu > li {
+    display: block;
+}
+
+/* Slider Section */
+.slider {
+    background: #fcfcfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #f7f7f7 50%, #d1d0d8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f7f7f7 50%,#d1d0d8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fcfcfc 0%,#f7f7f7 50%,#d1d0d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#d1d0d8',GradientType=0 ); /* IE6-9 */
+    padding: 50px 0;
+}
+
+.slider-content {
+    position: relative;
+
+}
+.slider-content:after, .slider-content:before{
+    position: absolute;
+    top: 50%;
+    color: #24ba9f;
+    font-size: 70px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.slider-content:after {
+    content: '>';
+    right: 1px;
+}
+.slider-content:before {
+    content: '<';
+    left: 1px;
+}
+
+.slider-content__inner {
+    width: 50%;
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    vertical-align: top;
+    text-align: center;
+}
+
+.slider-content__inner:last-child {
+    padding-right: 100px;
+}
+
+.slider-content__inner h2 {
+    font-size: 35px;
+    line-height: 53px;
+    margin: 20px 0 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+
+.slider-content__inner p {
+    font-size: 14px;
+    color: #000;
+}
+
+.slider-content__inner a {
+    font-size: 17px;
+    background-color: #24ba9f;
+    border-radius: 5px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    display: inline-block;
+    color: #fff;
+}
+
+.slider-content__inner a:hover {
+    background-color: #6cf8df;
+}
+
+/* Section Boxes */
+
+.boxes__box {
+    display: inline-block;
+    width: 33%;
+    position: relative;
+    min-height: 227px;
+    vertical-align: top;
+    background-size: cover;
+}
+
+.boxes__box:first-child {
+    background: url("/images/box1_img.jpg");
+
+}
+
+.boxes__box:nth-child(2) {
+    background: url("/images/box2_img.jpg");
+}
+
+.boxes__box:last-child {
+    padding: 10px;
+}
+
+.boxes__box > div {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.45);
+    width: 100%;
+    height: 65px;
+    bottom: 15px;
+    padding: 16px 16px 0 16px;
+}
+.boxes__box span {
+    font-weight: 600;
+    font-size: 15px;
+}
+.boxes__box p {
+    font-size: 14px;
+}
+/* Footer */
+footer {
+    background: #000;
+    padding-bottom: 90px;
+}
+
+.footer__logo {
+    padding: 35px 0;
+    display: inline-block;
+}
+.footer__bottom {
+
+}
+.footer__bottom__inner {
+    display: inline-block;
+    width: 25%;
+    box-sizing: border-box;
+}
+.footer__bottom__inner a {
+    color: #474747;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.footer__bottom__inner a:hover {
+    color: #909090;
+}
+
+.footer__bottom__inner p {
+    color: #353434;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.footer__bottom__inner:last-child {
+    margin-left: 25%;
+    vertical-align: top;
+}
