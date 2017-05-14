@@ -114,13 +114,21 @@
     <section class="contact-section">
         <div class="container">
             <h3 class="section-header">Kontakt</h3>
-            <div class="contact-form">
-                <form>
+            <form class="contact-form">
+                <div class="contact-form__inputs">
+                    <input type="text" name="name" placeholder="Imię" required>
 
-                </form>
-            </div>
+                    <input type="email" name="mail" placeholder="E-mail" required>
+
+                    <textarea type="text" rows="5" cols="50" name="info" placeholder="Wiadomość" required></textarea>
+                </div><!--
+                --><div class="contact-form__submit">
+                   <img src="images/red_chair.png">
+                    <input id="checkbox1" type="checkbox" required><label for="checkbox1">Zgadzam się na przetwarzanie danych osobowych</label>
+                    <input type="submit" name="submit" value="Wyślij" />
+                </div>
+            </form>
         </div>
-    </section>
     </section>
     <footer class="container">
             <div class="footer-copy">
