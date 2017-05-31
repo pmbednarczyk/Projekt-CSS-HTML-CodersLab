@@ -128,13 +128,18 @@ nav ul li a {
     background: linear-gradient(to bottom, #fcfcfc 0%,#f7f7f7 50%,#d1d0d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#d1d0d8',GradientType=0 ); /* IE6-9 */
     padding: 50px 0;
+    overflow: hidden;
 }
 
-.slider-content {
+.slider > .container {
     position: relative;
-
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+    overflow: hidden;
 }
-.slider-content:after, .slider-content:before{
+.slider > .container:after, .slider > .container:before, .nextSlide, .prevSlide{
     position: absolute;
     top: 50%;
     color: #24ba9f;
@@ -142,13 +147,20 @@ nav ul li a {
     line-height: 30px;
     cursor: pointer;
 }
-.slider-content:after {
-    content: '>';
+.nextSlide {
     right: 1px;
 }
-.slider-content:before {
-    content: '<';
+.prevSlide {
     left: 1px;
+}
+
+.slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    transition: cubic-bezier(0.66, -0.15, 0.04, 1.24) 1.4s;
 }
 
 .slider-content__inner {
