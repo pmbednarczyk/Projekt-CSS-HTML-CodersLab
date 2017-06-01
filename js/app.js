@@ -64,45 +64,41 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     });
 
-
-
     listPanelLi.forEach(function (el) {
         function calc(itemTitle, itemValue) {
-            itemTitle.innerText = el.innerText;
-            itemValue.innerText = el.dataset.price + "zł";
-            sumCounter += parseInt(el.dataset.price);
-            sumContainer.innerText = sumCounter + "zł";
-        };
+                itemTitle.innerText = el.innerText;
+                itemValue.innerText = el.dataset.price + "zł";
+               //sumCounter = 0;
+                sumCounter += parseInt(el.dataset.price);
+                sumContainer.innerText = sumCounter + "zł";
 
+        };
         el.addEventListener('click', function (event) {
-            var label = this.parentElement.parentElement.firstElementChild
+            var label = this.parentElement.parentElement.firstElementChild;
             label.innerText = el.innerText;
             label.style.color = "black";
-            if (this.parentElement.parentElement == dropdownLists[0]) {
+            if (this.parentElement.parentElement === dropdownLists[0]) {
                 calc(chairTitle, chairTitleValue);
-            } else if (this.parentElement.parentElement == dropdownLists[1]) {
+            } else if (this.parentElement.parentElement === dropdownLists[1]) {
                 calc(chairColor,chairColorValue);
-            } else if (this.parentElement.parentElement == dropdownLists[2]) {
+            } else if (this.parentElement.parentElement === dropdownLists[2]) {
                 calc(chairPattern, chairPatternValue);
             }
         });
     });
-
     transportCheckbox.addEventListener('click', function (event) {
             if (chairTransport.innerText && chairTransportValue.innerText) {
                 chairTransport.innerText = "";
                 chairTransportValue.innerText = "";
                 sumCounter -= parseInt(transportInput.dataset.transportPrice);
-                sumContainer.innerText = sumCounter + "zł";
             } else {
                 chairTransport.innerText = "Transport";
                 chairTransportValue.innerText = transportInput.dataset.transportPrice + "zł";
                 sumCounter += parseInt(transportInput.dataset.transportPrice);
-                sumContainer.innerText = sumCounter + "zł";
+
             }
-
+            sumContainer.innerText = sumCounter + "zł";
     });
-
 
 
 
